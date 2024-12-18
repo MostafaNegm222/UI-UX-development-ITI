@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>two params</title>
+</head>
+<body>
+    <script>
+
+        function acceptTwoParams (x,y) {
+            if (arguments.length != 2) {
+                throw "Please Enter two parameters only"
+            }
+            for(var i =0 ; i<arguments.length ; i++) {
+                if (typeof arguments[i] !== "number") {
+                    throw "Please Enter Numbers only"
+                }
+            }
+            return x+y ;
+        }
+
+        console.log(acceptTwoParams(2,3,4));
+        
+
+    </script>
+</body>
+</html>

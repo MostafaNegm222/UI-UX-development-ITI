@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>object</title>
+</head>
+<body>
+    <script>
+
+        let shape = {
+        width : this.width,
+        height : this.height,
+        Area : function (width,height) {
+            return `The area is ${parseFloat(this.width)*parseFloat(this.height)}`
+        },
+        perimeter : function (width,height) {
+            return `The perimeter is ${(parseFloat(this.width) + parseFloat(this.height))*2}`
+        },
+        DisplayInfo : function () {
+            return `${this.Area()} and ${this.perimeter()}`
+        }
+        }
+        shape.width = "20";
+        shape.height = "10";
+        console.log(shape.DisplayInfo());
+        
+    </script>
+</body>
+</html>

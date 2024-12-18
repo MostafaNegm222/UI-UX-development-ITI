@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>colors</title>
+</head>
+<body>
+    <script>
+
+        do {
+            var userName = prompt("Enter your name");
+        } while (userName == "")
+        if (userName != null) {
+            do {
+            var color = prompt("Enter your favour color (red,green,blue)")
+        } while (color == "")
+        
+        switch (color) {
+            case "RED":
+            case "red":
+            case "r" :
+            case "R" :
+                document.write(`<h1 style="color:red">Welcome ${userName}</h1>`)
+                break;
+            case "BLUE":
+            case "blue":
+            case "B" :
+            case "b" :
+            document.write(`<h1 style="color:blue">Welcome ${userName}</h1>`)
+            break;
+            case "GREEN" :
+            case "green" :
+            case "G" : 
+            case "g" :
+            document.write(`<h1 style="color:green">Welcome ${userName}</h1>`)
+            break;
+            default:
+            document.write(`<h1>Welcome ${userName}</h1>`)
+                break;
+        }
+        }
+
+        if (userName == null) {
+            document.write(`<h1>GO TO HELL</h1>`)
+        }
+        
+
+    </script>
+</body>
+</html>

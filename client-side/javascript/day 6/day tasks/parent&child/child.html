@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .container {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        h1 {
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 40px;
+            letter-spacing: 2px;
+            color: #777;
+        }
+        span {
+            display: block;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: aqua;
+            font-size: 20px;
+            font-weight: 600;
+        }
+    </style>
+    <title>child</title>
+</head>
+<body>
+    <div class="container">
+        <h1></h1>
+        <span>5</span>
+    </div>
+    <script>
+        let header = document.querySelector("h1")
+        let span = document.querySelector("span")
+        var i = 4
+        setInterval(function () {
+            span.textContent = i
+            i--
+        },1000)
+
+        let text = "Child Window".split("")
+        let current = 0
+        console.log(text);
+        
+        let counter = setInterval(function () {
+            header.textContent += text[current]
+            current++
+            if (current == text.length) {
+                clearInterval(counter)
+            }
+        },300)
+
+
+         setTimeout(function () {
+             window.close()
+            },5000)
+    </script>
+</body>
+</html>

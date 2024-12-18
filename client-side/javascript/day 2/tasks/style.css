@@ -1,0 +1,22 @@
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border: 1px solid #b9b9b9;
+    border-radius: 10px;
+    background-image: linear-gradient(135deg , #0d37f5 , #11f0f4 , #f413d6) ;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.15);
+}
+h2 {
+    font-size: 32px;
+    font-weight: bold;
+}
+p {
+    font-size: 20px;
+    font-weight: 500;
+}

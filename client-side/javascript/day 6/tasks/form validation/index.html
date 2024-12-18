@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>form validation</title>
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <h2>User Form</h2>
+            <form action="results.html" id="userForm" target="_blank">
+                <div class="user">
+                    <label for="username">User Name :</label>
+                <input type="text" name="username" id="username" placeholder="Enter your name">
+                <span class="name-error"></span>
+            </div>
+
+            <div class="user">
+                <label for="userMobile">User mobile :</label>
+                <input type="text" name="userMobile" id="userMobile" placeholder="Enter your mobile">
+                <span class="mobile-error"></span>
+            </div>
+
+            <div class="user">
+                <label for="userEmail">User Email :</label>
+                <input type="email" name="userEmail" id="userEmail" placeholder="Enter your email">
+                <span class="email-error"></span>
+            </div>
+
+            <div class="user">
+                <label for="useraddress">User Address :</label>
+            <input type="text" name="userAddress" id="userAddress" placeholder="Enter your Address">
+            <span class="address-error"></span>
+            </div>
+
+            <div class="radio">
+                <span>Choose gender :</span>
+                <input type="radio" name="userGender" id="male" value="male" checked>
+                <label for="male">Male</label>
+                <input type="radio" name="userGender" id="female" value="female">
+                <label for="male">Female</label>
+            </div>
+
+            <div class="buttons">
+                <input class="btn" id="submit" type="submit" value="Send Data">
+                <input class="btn" type="reset" value="Clear Data">
+                </div>
+            </form>
+        </div>
+
+    <script type="module" src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .container {
+            padding: 40px;
+            background-image: linear-gradient(135deg , #0048ff , rgb(230, 20, 230));
+            border-radius: 20px;
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+            color: white;
+        }
+    </style>
+    <title>WELCOME PAGE</title>
+</head>
+<body>
+    <div class="container">
+        <h2></h2>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+    </div>
+    <script>
+        var queryString = window.location.search.slice(1).split("&")
+        var valuesArray = []
+        queryString.forEach(function (e) {
+            let values = e.slice(e.indexOf("=") + 1)
+            valuesArray.push(values)
+        })
+        console.log(queryString);
+        console.log(valuesArray);
+
+        let headerName = document.querySelector('h2')
+        let pEmail = document.querySelector('p')
+        let pMobile = document.querySelector('p:nth-child(3)')
+        let pAddress = document.querySelector('p:nth-child(4)')
+        let gender = document.querySelector('p:nth-child(5)')
+        
+        headerName.textContent = `Welcome: ${valuesArray[0]}`
+        pMobile.textContent = `your Mobile is: ${valuesArray[1]}`;
+        pEmail.textContent = `your email is: ${valuesArray[2].replace('%40','@')}`
+        pAddress.textContent = `your Address is: ${valuesArray[3].replace('+','_')}`
+        gender.textContent = `your gender is: ${valuesArray[4]}`
+    </script>
+</body>
+</html>

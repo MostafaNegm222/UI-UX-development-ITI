@@ -1,0 +1,42 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    padding: 8px 16px;
+    background-color: aqua;
+    border: none;
+    border-radius: 10px;
+    font-size: 40px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.container {
+    background-color: aqua;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    display: none;
+}
+
+p {
+    font-size: 40px;
+    font-weight: 500;
+}
+
+p:not(:last-child) {
+    margin-right: 5px;
+}

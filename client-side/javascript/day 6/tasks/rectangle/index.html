@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rectangle</title>
+</head>
+<body>
+    
+    <script>
+
+let rectObj = {
+    width:20,
+    height:15,
+   area : function  () {
+    return this.width * this.height
+    },
+   perimeter : function  () {
+    return (this.width + this.height) * 2
+    },
+    displayInfo : function () {
+        return `the width is ${this.width}
+the height is ${this.height}
+the area is ${this.area()}
+the perimeter is ${this.perimeter()}`
+    
+}
+
+}
+console.log(rectObj.displayInfo());
+
+
+
+
+    </script>
+</body>
+</html>

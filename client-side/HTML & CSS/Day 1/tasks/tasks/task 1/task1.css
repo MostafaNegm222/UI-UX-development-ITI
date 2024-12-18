@@ -1,0 +1,31 @@
+p {
+    color: red;
+}
+
+p , div {
+    background-color: aqua;
+}
+
+div#mydiv p.mainClass {
+    text-align: center;
+}
+
+div p {
+    font-weight: bold;
+}
+
+input[type="text"].myClass {
+    background-color: brown;
+}
+
+div ~ span {
+    background-color: blue;
+}
+
+p.myClass {
+    font-size: 40px;
+}
+
+div#mydiv {
+    border: 5px solid #777;
+}

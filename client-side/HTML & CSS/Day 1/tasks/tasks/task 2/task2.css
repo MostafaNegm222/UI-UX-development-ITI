@@ -1,0 +1,49 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    background-image: url(https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjRFvmfPNmI2DbtKTcjqU4tTJSksGgV306uRpXZ26_FGHUporrjqUUdzntbf7Czuv_axqrAq4L6pvKHbGJfBMXHDTUIBzb1Del1SJAp9z_NLCXRzGnj7c5kpvvQh5JgQgWj1oA1l6eblN8koPVGHbjxQotSXRBZSx55JqY7sMrVdvPzVs_4hQJCXCnAvhQ/s1920-rw/heroscreen-neonlit-synthwave-cityscape-wallpaper-4k.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    height: 100vh;
+}
+.container::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+.inner {
+    padding: 20px;
+    background-color: #777;
+    color: white;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.inner h2 {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.inner p {
+    line-height: 1.8;
+}
+.box {
+    position: absolute;
+    top: 58%;
+    left: 71%;
+    padding: 10px;
+    background-color: #b9b9b9;
+    z-index: 2;
+}

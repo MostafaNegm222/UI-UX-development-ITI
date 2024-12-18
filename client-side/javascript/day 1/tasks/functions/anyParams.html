@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>any params</title>
+</head>
+<body>
+    <script>
+
+        function anyParams (...numbers) {
+            var sum = 0
+            for (var i=0 ; i< numbers.length ; i++) {
+                sum+= parseFloat(numbers[i])
+            }
+            return sum ;
+        }
+
+        console.log(anyParams(1,2,4,6));
+        
+
+    </script>
+</body>
+</html>
