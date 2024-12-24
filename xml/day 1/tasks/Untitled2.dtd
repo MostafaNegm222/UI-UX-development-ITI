@@ -1,0 +1,22 @@
+
+<!ELEMENT library (labrarian,books)>
+<!ATTLIST library 
+location CDATA #REQUIRED
+describtion CDATA #REQUIRED>
+<!ELEMENT labrarian EMPTY>
+<!ATTLIST labrarian name CDATA #REQUIRED>
+<!ELEMENT books (book)+>
+<!ELEMENT book (part)+>
+<!ATTLIST book
+title CDATA #REQUIRED
+ISBN ID #REQUIRED
+author CDATA #REQUIRED
+perface CDATA #REQUIRED
+>
+<!ELEMENT part (chapter)+>
+<!ATTLIST part title CDATA #REQUIRED>
+<!ELEMENT chapter (summary , (section)+)>
+<!ATTLIST chapter title CDATA #REQUIRED>
+<!ELEMENT summary (#PCDATA)>
+<!ELEMENT section (paragraph)+>
+<!ELEMENT paragraph (#PCDATA)>

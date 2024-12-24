@@ -1,0 +1,169 @@
+- XML Schema 
+
+-dtd limitation
+1- dtd has its own syntax so it's hard to learn
+2- number of element repetitions can't be achieved
+3- XML document can be reference only by 1 dtd
+4- don't support namespace
+5- no constrains on character data
+6- too simple attribute data models
+
+XML schema is an xml based alternative to DTD
+- use xml syntax easy to learn
+- support namespace 
+
+- It has 44 enhanced data-type
+- you can create your own data type
+- can express sets
+- it is object oriented can extend
+
+
+<xs:schema 
+xmlns :xs = "http: //www.w3.org/2001/XMLSchema"
+>
+.................. xs:string xs:integer xs:element
+................
+.............
+</xs:schema>
+
+<xs:element name='??' optional_attr ???/>
+type default fixed final 
+- type='xs:decimal'
+
+
+type (simple - complex)
+type= "xs:anyType"
+
+simple element ----> no sub element and attribute
+
+1- <xs:element>
+
+
+</xs:element>
+
+2- <xs:element type="" />
+<type></type>
+
+simple type types 
+
+1- Enumeration 
+
+<xs:simpleType name="weekType">
+<xs:restriction base = "xs:string">
+
+<xs:enumeration value = "sunday">
+.
+.
+.
+.
+<xs:enumeration value = "saturday">
+
+</xs:simpleType>
+<xs:element name="weekDay" type="weekType">
+
+1- create xml file
+<weekDay></weekDay>
+2- go to file  new file xsd w3c xml schema
+remind first line
+
+<xs:element name='weekDay' type= "weekType">
+    <xs:simpleType name="weekType">
+        <xs:restriction base="xs:string">
+
+            <xs:enumeration value = "sunday">
+            .
+            .
+            .
+            .
+            <xs:enumeration value = "saturday">
+        </xs:restriction>
+    </xs:simpleType>
+</xs:simpleType>
+
+
+// another way but can't use type again
+
+<xs:element name='weekDay'>
+ <xs:simpleType>
+        <xs:restriction base="xs:string">
+
+            <xs:enumeration value = "sunday">
+            .
+            .
+            .
+            .
+            <xs:enumeration value = "saturday">
+        </xs:restriction>
+    </xs:simpleType>
+</xs:simpleType>
+
+3- save schema
+4- dtd/schema ---> assign schema make sure .xsd
+5- assign in weekDay <weekDay>value</weekDay>
+
+<xs:pattern value="\d{3}-d{4}">  ----> inside restriction
+
+<xs:minInclusive value="1" />
+<xs:minInclusive value="31" />  ----> inside restriction
+
+exclusive not include values 
+
+
+to add two restriction 
+
+<xs:union memberType = "typeOne typeTwo"/>
+
+two simple type with each restriction with simple type name different 
+inside element create simple type without name
+use union with memberType = "typeOne typeTwo"
+
+we can use custom type in first simple type base = "xs:integer"
+in second simple type  in restriction base = "name_of_first_simple_type"
+
+
+
+
+
+complex type ----> subElement and attribute
+<xs:complexType>
+
+xs:sequence ---> order is must 
+xs:all   -----> should have all element without order and isn't repeat 
+xs:choice  ----> or relation like |
+<xs:element name="person">
+    <xs:complexType>  ----> mixed = "true" ----> if have element and data
+        <xs:sequence>  ----> can be all and choice 
+            <xs:element name="firstname" type="xs:string">  ----> attr ___> minOccurs , maxOccurs --> num or unbounded
+            attr fixed = "" ---> must assign with this value if you don't write it assign this value
+            attr default = "" ----> default value
+            <xs:element name="lastname" type="xs:string">
+
+
+            <xs:simpleContent>
+                <xs:extension base = "xs:string">
+                <xs:attribute name="age" type = "xs:integer">
+            </xs:simpleContent>
+
+        </xs:sequence>
+    </xs:complexType>
+</xs:element>
+
+<xs:attribute name="" optional_attributes>  ----> inside complexType
+optional_attributes -----> type = "xs:string" , fixed = "" , default = "" , use = (optional - required - prohibited)
+ prohibited mean attribute not appear 
+
+ <xs:extension base="name of parent">
+ <xs:restriction base="name of parent">
+
+<xs:complexType> final ---> #all - restriction - extension
+#all can't be extended or restricted
+restriction can't be restricted
+extension can't be extended 
+
+<xs:element ref="">
+
+<xs:group name="">
+
+</xs:group>
+
+<xs:group ref="">

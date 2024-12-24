@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Book store</title>
+</head>
+<body>
+    
+    <div class="container">
+        <div class="form-container">
+            <h2>Book Store</h2>
+                <div class="books-number">
+                    <div>
+                        <label for="booksNum">Enter number of books:</label>
+                        <input type="text" id="booksNum" name="booksNum">
+                        <span class="error numBook"></span>
+                    </div>
+                    <button id="numsBtn">Enter</button>
+                </div>
+                <div class="books-data">
+                    <div>
+                        <label for="bookName">Enter name of book:</label>
+                        <input type="text" id="bookName" name="bookName">
+                        <span class="error nBook"></span>
+                    </div>
+
+                    <div>
+                        <label for="bookPrice">Enter price of book:</label>
+                        <input type="text" id="bookPrice" name="bookPrice">
+                        <span class="error pBook"></span>
+                    </div>
+
+                    <div>
+                        <label for="authorName">Enter name of author:</label>
+                        <input type="text" id="authorName" name="authorName">
+                        <span class="error nAuthor"></span>
+                    </div>
+
+                    <div>
+                        <label for="authorEmail">Enter Email of author:</label>
+                        <input type="text" id="authorEmail" name="authorEmail">
+                        <span class="error eAuthor"></span>
+                    </div>
+                    <input type="button" value="Add book" id="subBook">
+                </div>
+        </div>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Book Name</th>
+                        <th>Book Price</th>
+                        <th>Author Name</th>
+                        <th>Author Email</th>
+                        <th>Edit</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>

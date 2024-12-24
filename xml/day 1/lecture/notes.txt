@@ -1,0 +1,127 @@
+Well formed XML
+1- single root element
+2- each element has start and end tag (it has self closed tags)
+3- tags will nested <x><y>value</y></x>
+4- attribute value in quotes
+5- tags & attributes names written as variable names (start with char - one word - case sensitive)
+6- an element mat not have two attribute with the same names
+
+example 
+to check // check well formedness (f7)
+
+<iti> //root element 
+
+<students id="1">
+    <name>Ahmed</name>
+    <address>123,ismailia,Egypt</address>
+    <email>name@example.com</email>
+</students>
+
+
+</iti>
+
+xml parser 
+
+-processes xml documents 
+1- read xml
+2- check syntax
+3- reports error
+
+-example
+1- internet browser 
+2- xml editor
+3- plugins
+
+no character 
+- < > "" '' &
+
+-entity reference 
+like html entity 
+
+5 < 6  ---> 5 &lt; 6
+
+- Attribute
+ex: address : "1123,Ismailia, Egypt"
+
+- processing instructions
+<?xml version = "1.0"?>
+
+to write enter
+
+<![CDATA[ [
+
+]]>
+
+Chapter 2
+
+- Document Type Definition
+1-the elements that can or must appear
+2-how often the elements can appear
+3-how the elements can be nested
+3- Allowable, required and default attributes
+
+category of DTD
+internal and external 
+<!DOCTYPE myMessage [!<ELEMENT myMessage (message)>]
+<!ELEMENT message (#PCDATA) >
+
+-to external 
+
+new file choose file.dtd
+
+<!ELEMENT iti (student)>
+<!ELEMENT student (#PCDATA)>
+
+SAVE THE FILE
+
+in file xml 
+tap dtd ----> assign ---> get file
+
+<!DOCTYPE iti SYSTEM "Path">
+from f8 to validate
+
+ex:
+<!ELEMENT Name (FName , LName)>
+<!ELEMENT FName (#PCDATA)>
+<!ELEMENT LName (#PCDATA)>
+
+If you want to add element or element just one only 
+<!ELEMENT Name (FName | LName)>
+<!ELEMENT FName (#PCDATA)>
+<!ELEMENT LName (#PCDATA)>
+
+add numbers 
+<!ELEMENT book (chapters+)>  ---> one or more
+<!ELEMENT book (chapters*)>  ---> zero or more
+<!ELEMENT book (chapters?)>  ---> zero or one
+
+simple declaration
+<!ELEMENT book EMPTY>  ----> SELF CLOSED
+<!ELEMENT book ANY>   ----> PCDATA OR ELEMENT
+<!ELEMENT book (#PCDATA | subElement)*>  ----> add more PCDATA OR ELEMENT
+
+- dtd attributes
+
+<!ATTLIST elementName
+AttributeName AttributeType AttributeBehavior
+AttributeName AttributeType AttributeBehavior
+AttributeName AttributeType AttributeBehavior
+....>
+
+<!ATTLIST message id CDATA #REQUIRED>
+
+1- #PCDATA ----> Element
+2- CDATA -----> Attribute
+3- <![CDATA[ []]> ----> section
+
+- AttributeBehavior
+1- #REQUIRED  ----> MUST ASSIGN
+2-"VALUE"  ----> assign default value
+3-#IMPLIED  ----> optional attribute
+4-#FIXED "EN" ----> must write "EN" in value of attribute and if you don't put attribute it assigned auto
+
+-AttributeType
+1-CDATA ----> DATE ANY DATATYPE
+2-ID -----> UNIQUE VALUE Must assign by char or _ can't use again in all file
+3-IDREF ----> to solve id issue it make reference to ID
+4-NMTOKEN ----> MUST SET VALUE WITHOUT SPACE

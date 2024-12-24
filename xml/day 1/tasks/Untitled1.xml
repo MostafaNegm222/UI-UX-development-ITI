@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE library SYSTEM "D:\data\UI UX development ITI\xml\day1\tasks\Untitled2.dtd">
+<library location="Ismailia" describtion="this is library">
+	<labrarian name="Ahmed"/>
+	<books>
+		<book title="book1" ISBN="_123" author="Mostafa" perface="perface1">
+			<part title="part1">
+				<chapter title="chapter1">
+					<summary>this is summary</summary>
+					<section>
+						<paragraph>this is section</paragraph>
+					</section>
+					<section>
+						<paragraph><![CDATA[
+								this is chapter is about
+								how 5 < 6 & 6 < 7
+							]]></paragraph>
+					</section>
+				</chapter>
+				<chapter title="chapter2">
+					<summary>this is summary</summary>
+					<section>
+						<paragraph>this is section</paragraph>
+					</section>
+					<section>
+						<paragraph><![CDATA[
+								this is chapter is about
+								how 5 < 6 & 6 < 7
+							]]></paragraph>
+					</section>
+				</chapter>
+			</part>
+			<part title="part2">
+				<chapter title="chapter1">
+					<summary>this is summary</summary>
+					<section>
+						<paragraph>this is section</paragraph>
+					</section>
+					<section>
+						<paragraph><![CDATA[
+								this is chapter is about
+								how 5 < 6 & 6 < 7
+							]]></paragraph>
+					</section>
+				</chapter>
+				<chapter title="chapter2">
+					<summary>this is summary</summary>
+					<section>
+						<paragraph>this is section</paragraph>
+					</section>
+					<section>
+						<paragraph><![CDATA[
+								this is chapter is about
+								how 5 < 6 & 6 < 7
+							]]></paragraph>
+					</section>
+				</chapter>
+			</part>
+		</book>
+		<book title="book2" ISBN="_456" author="Negm" perface="perface2">
+			<part title="part1">
+				<chapter title="chapter1">
+					<summary>this is summary</summary>
+					<section>
+						<paragraph>this is section</paragraph>
+					</section>
+					<section>
+						<paragraph><![CDATA[
+								this is chapter is about
+								how 5 < 6 & 6 < 7
+							]]></paragraph>
+					</section>
+				</chapter>
+				<chapter title="chapter2">
+					<summary>this is summary</summary>
+					<section>
+						<paragraph>this is section</paragraph>
+					</section>
+					<section>
+						<paragraph><![CDATA[
+								this is chapter is about
+								how 5 < 6 & 6 < 7
+							]]></paragraph>
+					</section>
+				</chapter>
+			</part>
+			<part title="part2">
+				<chapter title="chapter1">
+					<summary>this is summary</summary>
+					<section>
+						<paragraph>this is section</paragraph>
+					</section>
+					<section>
+						<paragraph><![CDATA[
+								this is chapter is about
+								how 5 < 6 & 6 < 7
+							]]></paragraph>
+					</section>
+				</chapter>
+				<chapter title="chapter2">
+					<summary>this is summary</summary>
+					<section>
+						<paragraph>this is section</paragraph>
+					</section>
+					<section>
+						<paragraph><![CDATA[
+								this is chapter is about
+								how 5 < 6 & 6 < 7
+							]]></paragraph>
+					</section>
+				</chapter>
+			</part>
+		</book>
+	</books>
+</library>

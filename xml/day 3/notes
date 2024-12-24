@@ -1,0 +1,165 @@
+- XPATH 
+
+xpath : to finding information is xml document
+
+xpath nodes
+1-element 
+2- attribute
+3-text
+4-namespace
+5-comment
+6- processing instruction
+7- root
+
+location 
+relative and absolute
+
+-general form
+Axis::nodetest[predicate (opt)]
+
+Axis 
+node set relative 
+
+current or context ---> my position
+parent ---> parent node 
+child ---> child in tree
+ancestor ----> parent & parent of parent
+descendant ----> child & child of child 
+following ----> next sibling  with there child
+following-sibling ---> next elements only
+preceding ----> next element with their child
+preceding-sibling ---> before elements only
+
+
+-node test
+
+node name or node type (element - attr - comment)
+
+node() ---> select all node 
+text() ----> select all text
+comment() ---> select all comment
+instruction processing () ---->
+* ----> all 
+enter is text node as white space
+
+
+predicate
+
+to filter node test
+
+1- numerical
+2- boolean 
+3- string
+4- node-set
+
+-numerical
+
+position based 1 not 0
++ 
+- 
+* 
+div
+mod
+
+ceiling ()
+floor ()
+round ()
+sum ()
+
+logical operator 
+!= 
+== 
+<=
+>=
+<
+>
+
+last()
+position()
+count(node-set)
+
+
+
+string
+
+start-with
+contains
+string-length
+substring
+concat
+
+Name child::Name 
+@Name attribute::Name
+//  all descending
+. my position
+.. parent 
+
+* all
+@ * all attributes
+node() match any node 
+
+/bookstore/*  all element i
+//*  all element in document
+//title[@*] all title have attribute
+
+paper/*/title
+
+XSLT  
+
+XSL ----> xml 
+XSL ----> LIKE CSS
+
+create file XSLT 
+xsl ---> extension
+ok ok 
+code html 
+<xsl:template [match = 'node-to-match']   ----> xpath 
+               [name = "template-name"]>  ---> just name
+
+               inside html 
+               <html>
+                <body>
+                        <xsl:value-of select = 'message'>
+                </body>
+               </html>
+
+</xsl:template>
+
+<xsl:value-of select = 'node-name'>
+
+xsl query 
+transform
+
+<xsl:apply-templates select = "node-name"> ---> 
+<xsl:apply-templates/> ---> apply all templates in file 
+<xsl:call-templates name = "">
+
+<xsl:template match = "node">
+
+<p>Welcome <xsl:value-of select = 'node-name'></p>
+
+</xsl:template>
+
+<xsl:if test="xpath">
+</xsl:if>
+
+<xsl:foreach select="xpath">
+</xsl:foreach>
+
+<xsl:sort select="xpath or node">
+</xsl:sort>
+
+<xsl:choice>
+    <xsl:when test = "price > 10">
+
+    </xsl:when>
+
+       <xsl:otherwise>
+    
+    </xsl:otherwise>
+</xsl:choice>
+
+<xsl:element name= "person">
+<xsl:attribute name= "name">xml</xsl:attribute>
+Negm
+</xsl:element>
