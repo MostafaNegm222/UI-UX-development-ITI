@@ -43,7 +43,7 @@ body {
 }
 .table-container table {
     border-collapse:collapse;
-    width: 600px;
+    width: 800px;
     margin: 0 auto;
     background-color: #fff;
     border: 1px solid #777;
@@ -56,6 +56,27 @@ body {
 .table-container table tbody td {
     border: 1px solid #777;
     padding: 10px;
+}
+.table-container table tbody tr {
+    text-align: center;
+}
+.btn {
+    padding: 8px 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.btn:focus {
+    outline: none;
+}
+.btn.edit ,.btn.save{
+    background-color: rgb(38, 38, 232);
+    color: #fff;
+}
+.btn.delete , .btn.cancel {
+    background-color: rgb(236, 37, 37);
+    color: #fff;
 }
 .form-container label {
     font-size: 18px;
