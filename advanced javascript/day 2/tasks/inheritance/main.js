@@ -60,6 +60,7 @@ Rectangle.prototype.calcPerimeter = function () {
 }
 
 var sq1 = new Square(10)
+var sq2 = new Square(10)
 var cir1 = new Circle(10)
 var rec1 = new Rectangle(10 ,20)
 

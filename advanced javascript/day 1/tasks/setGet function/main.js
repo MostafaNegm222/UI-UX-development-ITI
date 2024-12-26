@@ -7,9 +7,9 @@ var obj = {
     setGetGen : function () {
         var self = this
         for(var key in self) {
-          (function (val) {
+          (function () {
               var variable = self[key]
-            if (typeof val !== 'function') {
+            if (typeof variable !== 'function') {
             Object.defineProperty(self , key , {
                 set : function (val) {
                     variable = val

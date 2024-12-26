@@ -5,7 +5,7 @@ function Rectangle (width , height) {
 }
 Rectangle.count =0
 Rectangle.showCount = function () {
-    console.log(Rectangle.count);
+    return Rectangle.count;
 }
 Rectangle.prototype = {
     area : function () {
@@ -21,7 +21,7 @@ Rectangle.prototype = {
 
 var rect1 = new Rectangle (20,30)
 var rect2 = new Rectangle (30,40)
-Rectangle.showCount()
+console.log(Rectangle.showCount());
 
 console.log(rect1);
 console.log(rect2);

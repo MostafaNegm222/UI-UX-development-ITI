@@ -14,9 +14,9 @@ function Box(height, width, length, material) {
     };
 
 
-    this.deleteBook = function(book) {
-    this.content.splice(this.content.indexOf(book),1)
-    this.numOfBooks = this.content.length;
+    this.deleteBook = function(property) {
+      this.content = this.content.filter(book => book.name !== property && book.type !== property);
+      this.numOfBooks = this.content.length;
     };
 
 
@@ -58,8 +58,11 @@ box1.addBook(book3);
 box2.addBook(book1);
 box2.addBook(book2);
 box2.addBook(book3);
+console.log(box1);
+console.log(box2);
 
 box1.deleteBook("Fiction");
+box1.deleteBook("Book2");
 
 document.write(box1)
 var totalBooks = box1 + box2;
