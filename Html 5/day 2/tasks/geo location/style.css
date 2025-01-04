@@ -1,0 +1,35 @@
+#map {
+    height: 80%;
+    width: 90%;
+    margin: 0 auto;
+}
+
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 40px;
+    margin-bottom: 30px;
+}
+
+.getGeo {
+    border: none;
+    padding: 10px 20px;
+    background-color: #6CD2E7;
+    border-radius: 10px;
+    margin-right: 20px;
+    cursor: pointer;
+    color: #434343;
+    font-weight: bold;
+}
+
+#countries {
+    padding: 10px;
+}

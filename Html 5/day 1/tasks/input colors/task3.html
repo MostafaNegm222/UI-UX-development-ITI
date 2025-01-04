@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="task3.css">
+    <title>Document</title>
+</head>
+
+
+
+<body>
+    
+
+    <div>
+        <form oninput= "result.value = a.value + ' ' + b.value ">
+
+            <label for="a">First name:</label>
+            <input type="text" id="a" name="first" required minlength="3" maxlength="10">
+            
+            <label for="b">Last name:</label>
+            <input type="text" id="b" name="last" required minlength="3" maxlength="10">
+
+
+            <label for="red">red :</label>
+            <input type="range" min="0" max="255" value="0" id="red" oninput="updateColor()">
+         
+            <label for="green">green :</label>
+            <input type="range" min="0" max="255" value="0" id="green" oninput="updateColor()">
+           
+            <label for="blue">blue :</label>
+            <input type="range" min="0" max="255" value="0" id="blue" oninput="updateColor()">
+
+            <output name="result" for="a b" id="result"></output>
+
+            <input type="submit" value="Send Name">
+          </form>
+    </div>
+
+
+
+
+
+      <script>
+       function updateColor () {
+        var result = document.getElementById("result");
+        var red = document.getElementById("red").value ;
+        var green = document.getElementById("green").value;
+        var blue = document.getElementById("blue").value;
+
+        result.style.color = `rgb(${red} , ${green} , ${blue} )`
+
+       }
+      </script>
+      
+</body>
+</html>

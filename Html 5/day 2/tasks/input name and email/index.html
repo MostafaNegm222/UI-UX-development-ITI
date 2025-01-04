@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>inputs</title>
+</head>
+<body>
+    
+    <div class="container">
+        <h2>Change User Email</h2>
+        <form action="">
+            <div class="name">
+                <label for="name">UserName:</label>
+                <input type="text" required id="name" placeholder="please enter name">
+            </div>
+            <div class="email">
+                <label for="email">User email:</label>
+                <input type="email" required id="email" placeholder="please enter email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$">
+            </div>
+           <div class="check">
+            <input type="checkbox" name="check" id="check">
+            <label for="check">Remember me </label>
+           </div>
+            <input type="submit" id="submit">
+        </form>
+    </div>
+
+<script src="main.js"></script>
+</body>
+</html>

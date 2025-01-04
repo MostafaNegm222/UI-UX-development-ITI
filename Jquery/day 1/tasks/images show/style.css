@@ -1,0 +1,33 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    height: 100vh;
+    background-image: linear-gradient(135deg , #0730ff , #13e7ff , #e412f8);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-image {
+    width: 400px;
+    margin: 40px auto;
+}
+
+.main-image img {
+    max-width: 100%;
+}
+
+.secondary-images {
+    width :500px;
+    display: flex;
+    justify-content: center;
+}
+
+.secondary-images img {
+    width: 100px;
+}

@@ -146,7 +146,7 @@ function Author(authorName, authorEmail) {
   function tablePush() {
     let tr = document.createElement("tr");
     tr.setAttribute("id", `td-${tdId}`);
-    tr.innerHTML = `<td>${bookName.value}${count}</td>
+    tr.innerHTML = `<td>${bookName.value}</td>
                     <td>${bookPrice.value}</td>
                     <td>${authorName.value}</td>
                     <td>${authorEmail.value}</td>
@@ -165,7 +165,7 @@ function Author(authorName, authorEmail) {
     if (e.target.classList.contains("edit")) {
       var tr = e.target.parentElement.parentElement;  //button --> td ---> tr
       console.log(typeof tr); //object
-      var tds = tr.children;
+      var tds = tr.children; // collection html
       let arr = [];
       for (let i = 0; i < 4; i++) {
         arr.push(tds[i].textContent);

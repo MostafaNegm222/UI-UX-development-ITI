@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/logo.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <title>Cairokee</title>
+</head>
+<body>
+    
+    <div class="logo">
+        <img src="images/bigLogo.png" alt="">
+        <h1>Cairokee</h1>
+    </div>
+    <div class="container">
+        <div class="audios"></div>
+        <div class="player">
+            <div class="image">
+                <img src="images/1.jpg" alt="" id="audioImg">
+            </div>
+            <h2 class="title" id="audioText">Layla</h2>
+            <input type="range" id="duration" min="0" max="100" value="0" >
+            <div class="buttons">
+                <button id="backward"><i class="fa-solid fa-backward"></i></button>
+                <button id="play"><i class="fa-solid fa-play"></i></button>
+                <button id="pause"><i class="fa-solid fa-pause"></i></button>
+                <button id="stop"><i class="fa-solid fa-stop"></i></button>
+                <button id="forward"><i class="fa-solid fa-forward"></i></button>
+            </div>
+            <div class="volume">
+                <input type="range" id="volume" min="0" max="100" value="100">
+                <button id="muted"><i class="fa-solid fa-volume-high"></i></button>
+            </div>
+        </div>
+        <audio id="audio"></audio>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>

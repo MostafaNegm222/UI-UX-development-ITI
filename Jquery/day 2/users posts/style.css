@@ -1,0 +1,83 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+.container {
+    min-height: 100vh;
+    background: #0F2027;
+    background: linear-gradient(to right, #2C5364, #203A43, #0F2027);
+    padding-top: 40px;
+}
+
+.users-tab {
+    width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.user {
+    padding: 10px 20px;
+    border: none;
+    background-color: rgb(19, 19, 19);
+    color: #ececec;
+    font-size: 20px;
+    border-radius: 10px;
+    flex: 20% 1 1;
+    cursor: pointer;
+}
+
+.user.active {
+    background-color: #2C5364;
+    color: #f3f3f3;
+    border-bottom: 1px solid #f3f3f3;
+}
+
+.posts {
+    width: 990px;
+    margin: 60px auto 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px , 1fr));
+    gap: 30px;
+}
+
+.post {
+    padding: 20px;
+    background-color: #e4e4e4;
+    border-radius: 10px;
+    position: relative;
+    text-align: center;
+}
+
+.post span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 5px 10px;
+    background-color: #2C5364;
+    border-radius: 10px 0 10px 0;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.post h2 {
+    margin: 20px 0;
+    font-size: 24px;
+    font-weight: 700;
+    color: #2C5364;
+}
+
+.post p {
+    line-height: 1.7;
+    color: #777;
+}
