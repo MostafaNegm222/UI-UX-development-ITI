@@ -1,0 +1,125 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+    height: 100vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    overflow: hidden;
+    position: relative;
+}
+
+.traffic {
+    width: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-self: flex-start;
+}
+
+.light-container {
+    width: 100%;
+    height: 250px;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.light {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    transition: 0.4s;
+}
+
+.red {
+    background-color: red;
+    animation: red 1s  2 alternate ;
+}
+
+.yellow {
+    background-color: yellow;
+    animation: yellow 1s 1s 2 alternate ;
+}
+
+.green {
+    background-color: green;
+    animation: green 1s 2s 2 alternate ;
+}
+
+.lampPost {
+    width: 30px;
+    height: 70px;
+    background-color: black;
+    box-shadow: 0px 6px 4px rgba(0,0,0,0.2);
+}
+
+.cube {
+     width: 500px;
+    background-color: black;
+    /* margin-left: 20px; */
+    animation: move 6s infinite linear;
+    animation-play-state: paused;
+    position: absolute;
+}
+
+.red:hover {
+    box-shadow:  0 0 5px 5px red;
+}
+.green:hover {
+    box-shadow:  0 0 5px 5px green;
+}
+.yellow:hover {
+    box-shadow:  0 0 5px 5px yellow;
+}
+
+@keyframes red {
+    100% {
+    box-shadow:  0 0 5px 5px red;
+    }
+}
+@keyframes yellow {
+    100% {
+    box-shadow:  0 0 5px 5px yellow;
+    }
+}
+@keyframes green {
+    100% {
+    box-shadow:  0 0 5px 5px green;
+    }
+}
+
+@keyframes move {
+    0%{
+        left: -400px;
+    }
+
+    49% {
+        transform: rotateY(0deg);
+    }
+    50% {
+        transform: rotateY(180deg);
+        left: 100%;
+    }
+    99% {
+        transform: rotateY(180deg);
+    }
+    100% {
+        transform: rotateY(0deg);
+        left: -400px
+    }
+}
+

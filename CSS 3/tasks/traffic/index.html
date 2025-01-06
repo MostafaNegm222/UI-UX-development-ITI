@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>traffic</title>
+</head>
+<body>
+    
+
+    <div class="container">
+        <div class="traffic">
+            <div class="light-container">
+                <div class="red light"></div>
+                <div class="yellow light"></div>
+                <div class="green light"></div>
+            </div>
+            <div class="lampPost"></div>
+        </div>
+        <img src="https://i.pinimg.com/originals/dd/58/ab/dd58abb0282d0b976519476fbe7e04fe.gif" alt="" class="cube">
+    </div>
+
+
+    <script>
+        document.querySelector(".green").addEventListener("mouseenter" , function () {
+            document.querySelector(".cube").style.animationPlayState = "running"
+        })
+        document.querySelector(".green").addEventListener("mouseleave" , function () {
+            document.querySelector(".cube").style.animationPlayState = "paused"
+        })
+    </script>
+</body>
+</html>
