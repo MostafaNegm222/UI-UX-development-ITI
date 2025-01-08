@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Cookies</title>
+</head>
+<body>
+    
+<form action="welcome.html">
+    <div class="name">
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name" placeholder="Enter your name">
+    </div>
+    <div class="age">
+        <label for="age">age:</label>
+        <input type="text" name="age" id="age" placeholder="Enter your age">
+    </div>
+    <fieldset>
+        <legend>Choose your gender:</legend>
+        <input type="radio" name="gender" id="male" value="male">
+        <label for="male"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgdmvTNzX2AmCX2rSRQBa4KkZsU2GgiWh8sA&s" alt="" width="40px"></label>
+        <input type="radio" name="gender" id="female" value="female">
+        <label for="female"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzPRQ6LprnPzvvP-_vVO_nhSokwda8CMsnwQ&s" alt="" width="40px"></label>
+    </fieldset>
+    <input type="color" name="color"><br>
+    <input type="submit">
+</form>
+
+    <script src="cookies.js"></script>
+    <script>
+        let forms = document.forms[0];
+let username = document.getElementsByName("name")[0]
+let age = document.getElementsByName("age")[0]
+
+let color = document.getElementsByName("color")[0]
+
+
+forms.addEventListener("submit" , function() {
+    let gender = document.querySelector("[type='radio']:checked")
+    console.log(gender);
+    setCookie("name" , username.value ,"2")
+    setCookie("age" , age.value ,"2")
+    setCookie("gender" , gender.value ,"2")
+    setCookie("color" , color.value ,"2")
+    setCookie("count" , 0 ,"2")
+})
+    </script>
+</body>
+</html>
