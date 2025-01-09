@@ -3,7 +3,7 @@ let loader = document.querySelector(".loader-container")
 
 
 var xhr = new XMLHttpRequest ()
-xhr.open('get' , "https://jsonplaceholder.typicode.com/posts")
+xhr.open('get' , "https://jsonplaceholderaaaa.typicode.com/posts")
 xhr.send()
 
 xhr.addEventListener("readystatechange" , function () {
