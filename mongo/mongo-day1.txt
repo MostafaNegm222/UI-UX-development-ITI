@@ -1,0 +1,22 @@
+1- done
+2- show dbs 
+3- use users --> db.createCollection("people")
+4- db.people.insertOne({name:"Mostafa" , age :25 , courses : ["html" , "css" , "js"] })
+5- done 
+6- db.people.insertMany([{name:"Negm" , age:27},{name:"Ahmed",age:26} , {name :"Mohammed" , age : 28}])
+7- show collections
+8- db.people.find() or db.people.find({})
+9- db.data.find({country:"France"})
+10- db.data.find({ country: "France", age: { $gt: 40 } }).count()
+11- db.data.updateMany({salary : {$exists : false}} , {$set : {salary : 2500}})
+db.data.updateMany({salary : null} , {$set : {salary : 2500}})
+12 - db.data.updateMany({company : "Oodoo"}, {$inc : {salary : 1200}})
+13 -db.data.find({},{first_name:1 , salary:1 , _id:0}).sort({salary : -1}).limit(3)
+14 -db.data.find({country:"Brazil"}, {first_name : 1 , _id : 0 }).sort({age:-1}).limit(1)
+15 - db.data.find({} , {first_name : 1 , salary : 1 , _id : 0}).sort({salary:-1})
+16 -db.data.find({} , {country : 1 , address : 1 , _id : 0}).limit(30)
+17- db.data.find({country: "China" , age : {$gt : 16 , $lt : 35}})
+18 - db.data.find({} , {first_name:1 , _id:0})
+19 - db.data.find({fruits : {$elemMatch : {$in : ["apple" , "kiwi"]}}})
+db.data.find({fruits : {$all : ["apple" , "kiwi"]}})
+20 - db.data.find({fruits: { $nin: ["banana", "apricot"] }})

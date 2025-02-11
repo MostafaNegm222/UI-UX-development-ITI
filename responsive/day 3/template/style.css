@@ -1,0 +1,350 @@
+* {
+    margin: 0 ;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.contact p , .logo , .nav-list{
+    margin: 0 !important;
+}
+
+.hero {
+    height: 100vh;
+    background-image: url(./assest/header_bg.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.hero-content {
+    padding: 0 !important;
+}
+
+.play-btn {
+    font-size: 32px;
+    width: 80px;
+    height: 80px;
+    position: relative;
+    z-index: 2;
+    border-radius: 50%;
+}
+.play-btn::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    z-index: 1; 
+    border:5px solid rgba(4, 131, 59, 0.4);
+    animation: beat 0.8s infinite alternate;
+}
+
+.cards-hero {
+    position: relative;
+    top: -100px;
+}
+
+@media (max-width:991px) {
+    
+    
+    .cards-hero {
+        width: 90%;
+        margin: 0 auto;
+    }
+    .hero-card {
+        margin: 0 auto;
+    }
+}
+
+.card-icon {
+    font-size: 32px;
+}
+
+.hero-card {
+    height: 245px;
+}
+
+.card-icons {
+    text-align: center;
+}
+
+.icon-container {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    font-size: 50px;
+    background-color: #F5F4F0;
+    position: relative;
+    counter-increment: cards;
+    transition: 0.4s;
+}
+
+.icon-container span {
+    font-size: 16px;
+    color: white;
+    position: absolute;
+    top: 7px;
+    right: 11px;
+    z-index: 3;
+    transition: 0.4s;
+}
+
+.icon-container i {
+    position: relative;
+    z-index: 2;
+}
+
+.icon-container::before {
+    content: "";
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #528760;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    transition: 0.4s;
+}
+
+.icon-container::after {
+    content: "";
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #528760;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 1;
+    border: 5px solid white;
+    transition: 0.4s;
+}
+
+.icon-container:hover  {
+    background-color: #528760;
+}
+.icon-container:hover::after , .icon-container:hover::before {
+    background-color: #fff;
+}
+.icon-container:hover::before {
+    left: 40%;
+}
+
+.icon-container:hover span {
+    color: #528760;
+}
+
+.row .image {
+    background-image: url(./assest/about-1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.row .content {
+    background-color: #F5F4F0;
+}
+.watch-icon {
+    position: relative;
+    font-size: 20px;
+}
+
+.watch-icon::after {
+    content: '';
+    width: 32px;
+    height: 20px;
+    border: 1px solid #528760;
+    border-radius: 4px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50% , -50%);
+}
+
+@keyframes beat {
+    100% {
+        transform: scale(1.4);
+        opacity: 0; 
+    }
+}
+.image-card {
+    height: 400px;
+    object-fit: cover;
+}
+
+.slider {
+    background-image: url(./assest/bg_4.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 10%;
+    height: 400px;
+    position: relative;
+}
+
+.slider::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #52876098;
+}
+
+.testimonial-slider {
+    position: relative;
+    z-index: 45;
+    top: -100px;
+}
+
+.test-card {
+    overflow: visible !important;
+    padding-top: 30px ;
+}
+
+@media (max-width:767px) {
+    .test-cont {
+        width: 400px;
+        height: 260px;
+        overflow: hidden !important;
+        margin: 0 auto;
+    }
+}
+.testimonial-card {
+    width: 350px;
+    height: 200px;
+    background-color: white;
+    margin: 0 auto;
+    position: relative;
+}
+
+.test-icon {
+    width: 40px;
+    height: 40px;
+    background-color: #528760;
+    color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: -20px;
+    left: 20px;
+    z-index: 10;
+    text-align: center;
+    align-content: center;
+    font-size: 24px;
+}
+
+.profile-img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
+
+.pricing {
+    background-color: #F5F4F0;
+}
+
+.price-num {
+    color: #528760;
+    font-size: 56px;
+    position: relative;
+    width: fit-content;
+    left: -10px;
+}
+
+.price-num::before {
+    content: "$";
+    color: #999999;
+    font-size: 24px;
+    position: absolute;
+    top: -10px;
+    left: -10px;
+}
+.price-num::after {
+    content: "/mo";
+    color: #999999;
+    font-size: 16px;
+    position: absolute;
+    bottom: -10px;
+    right: -30px;
+}
+.price-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.feature-con {
+    width: fit-content;
+    margin: 0 auto;
+}
+.form-container {
+    height: 100vh;
+    background-image: url(./assest/bg_2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+}
+.form-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #52876098;
+}
+
+.blog-card {
+    position: relative;
+    transition: 0.4s;
+}
+.image-cont {
+    position: relative;
+}
+.blog-card:hover .card-date {
+    background-color: #528760;
+}
+.blog-card:hover .card-date h5 {
+    color: #fff !important;
+}
+.card-date {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background-color: #F5F4F0;
+    border-radius: 50%;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: 0.4s;
+    text-align: center;
+    align-content: center;
+}
+
+.card-date h5 , .card-date p , .card-date span {
+    margin: 0 !important;
+    transition: 0.4s;
+}
+
+.card-date span {
+    font-size: 12px;
+}
+
+.footer-icons i {
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+    text-align: center;
+    align-content: center;
+    background-color: #528760;
+    color: #fff;
+    border-radius: 50%;
+}
+.last-footer {
+    font-size: 12px !important;
+}
