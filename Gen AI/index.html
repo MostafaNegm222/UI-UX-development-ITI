@@ -1,0 +1,28 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>QuickSort Demo</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; margin-top: 50px; }
+        input, button { margin: 10px; padding: 5px; }
+    </style>
+</head>
+<body>
+    <h1>QuickSort Demo</h1>
+    <input type="text" id="inputArray" placeholder="Enter numbers (e.g., 5, 2, 9, 1)">
+    <button onclick="sortArray()">Sort</button>
+    <p>Sorted Result: <span id="result"></span></p>
+
+    <script src="quickSort.js"></script>
+    <script>
+        function sortArray() {
+            const input = document.getElementById('inputArray').value;
+            const arr = input.split(',').map(Number).filter(n => !isNaN(n));
+            const sorted = quickSort([...arr]); // Use spread to avoid mutating original
+            document.getElementById('result').innerText = sorted.join(', ');
+        }
+    </script>
+</body>
+</html>

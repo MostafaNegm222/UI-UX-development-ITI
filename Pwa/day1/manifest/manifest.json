@@ -1,0 +1,25 @@
+{
+  "name": "Typing App",
+  "short_name": "Typing",
+  "theme_color": "#8936FF",
+  "background_color": "#2EC6FE",
+  "display": "standalone",
+  "orientation": "any",
+  "dir": "auto",
+  "lang": "en-US",
+  "start_url": "./index.html",
+  "icons": [
+    {
+      "purpose": "maskable",
+      "sizes": "512x512",
+      "src": "icon512_maskable.png",
+      "type": "image/png"
+    },
+    {
+      "purpose": "any",
+      "sizes": "512x512",
+      "src": "icon512_rounded.png",
+      "type": "image/png"
+    }
+  ]
+}

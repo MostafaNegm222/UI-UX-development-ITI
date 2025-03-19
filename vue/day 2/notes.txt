@@ -1,0 +1,12 @@
+solt named
+
+in html name =  ""
+
+
+in app 
+
+<template #"" or v-slot:footer></template>
+
+// : v-bind 
+// @ v-on 
+// # v-slot 

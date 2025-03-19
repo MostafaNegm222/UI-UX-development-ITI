@@ -1,0 +1,61 @@
+reactive value 
+rerender 
+computed value
+
+:v-model
+
+return user : "User"
+input v-model="user"
+h1 {{user}}
+
+--------------------------
+
+components inside src 
+Card.vue
+code inside template
+in app script
+import Card
+in template <Card />
+
+export default {
+    data () {
+
+    }, methods: {
+
+    },
+    components {
+        Card
+    }
+}
+
+---------------
+
+inside export default in card
+ props : {
+    itemName : String or 
+    {
+        required : true
+    }, 
+    itemPrice : Number or 
+    {
+        type : Number ,
+        default : 0
+    }
+ }
+
+ inside card in app 
+
+ <Card itemName = "Burger" itemPrice=120 />
+
+ VUETIFY // NUXT UI 
+
+
+ inside card template
+
+ <slot></slot>
+
+ inside card in app
+
+ <Card>
+ add html in parent like <p>kjaslkf;akf;e</p>
+ </Card>

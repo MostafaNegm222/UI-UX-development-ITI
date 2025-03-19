@@ -1,0 +1,10 @@
+Time Complexity:
+QuickSort: O(n log n) average, O(n²) worst case (rare with good pivot choice).
+MergeSort: O(n log n) always.
+HeapSort: O(n log n) always.
+JavaScript’s sort(): O(n log n) typically (V8 engine uses Timsort).
+Space Complexity:
+QuickSort: O(log n) recursive, O(1) extra space (in-place).
+MergeSort: O(n).
+HeapSort: O(1).
+QuickSort is faster in practice due to in-place sorting and cache efficiency, unlike MergeSort’s extra space needs.

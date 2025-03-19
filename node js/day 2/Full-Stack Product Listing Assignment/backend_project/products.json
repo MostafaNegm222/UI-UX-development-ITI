@@ -1,0 +1,52 @@
+[
+  {
+    "id": 1,
+    "name": "Wireless Headphones",
+    "category": "Electronics",
+    "price": 49.99,
+    "stock": 120,
+    "rating": 4.5,
+    "description": "High-quality wireless headphones with noise cancellation.",
+    "image": "Wireless Headphones.webp"
+  },
+  {
+    "id": 2,
+    "name": "Smartphone",
+    "category": "Electronics",
+    "price": 699.99,
+    "stock": 50,
+    "rating": 4.7,
+    "description": "Latest model smartphone with an OLED display and 128GB storage.",
+    "image": "Smartphone.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Running Shoes",
+    "category": "Fashion",
+    "price": 79.99,
+    "stock": 200,
+    "rating": 4.3,
+    "description": "Lightweight and comfortable running shoes for daily use.",
+    "image": "Running Shoes.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Gaming Laptop",
+    "category": "Computers",
+    "price": 1299.99,
+    "stock": 30,
+    "rating": 4.8,
+    "description": "Powerful gaming laptop with RTX 4060 and 16GB RAM.",
+    "image": "Lenovo Ideapad 5.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Coffee Maker",
+    "category": "Home Appliances",
+    "price": 59.99,
+    "stock": 80,
+    "rating": 4.6,
+    "description": "Automatic coffee maker with programmable settings.",
+    "image": "Coffee Maker.webp"
+  }
+]
